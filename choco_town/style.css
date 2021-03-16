@@ -1,0 +1,183 @@
+
+* {
+
+}
+
+body {
+	margin: 0;
+	padding: 0 ;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.background {
+	background-image: url('choco_sky.jpg');
+	box-shadow: 1em 1em 1em grey;
+	height: 520px;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	background-size: cover;
+
+	bottom: 0;
+	left: 0;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+}
+
+.town {
+
+	background-image: url('town.png');
+	height: 87%;
+	width: 100%;
+	/*position: absolute;*/
+	background-repeat: repeat-x;
+	background-position: 0 100%;
+	/*background-size: 2500px auto;*/
+
+	animation: town_move 50s linear infinite;
+
+
+}
+
+.greeting {
+	color: white;
+	
+	position: absolute;
+	top: 6%;
+	right: -100%;
+	animation: greeting_move 40s linear infinite;
+}
+
+h1 {
+	font-size: 5em;
+	font-family: 'Courier New';
+	opacity: 0.5;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+
+.lulu_wheel {
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	bottom: 13%;
+	left: 40%;
+
+	animation: lulu_hop 1s infinite;
+}
+
+#lulu_wheels {
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+}
+
+#fast {
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+}
+
+#heart {
+	position: absolute;
+	bottom: 20%;
+	left: -20%;
+	display: none;
+
+	animation: heart_poo 1s infinite;
+}
+
+
+
+#loveYou {
+	position: absolute;
+	bottom: 30%;
+	left: 60%;
+	display: none;
+}
+
+.bottom {
+	height: 9.6%;
+	width: 100%;
+	margin: auto;
+	padding: 1%;
+	position: absolute;
+	background-size: 100%;
+	font-family: 'Courier New';
+	bottom: 0;
+	background-color: black;
+	display: flex;
+	align-content: left;
+}
+
+h5 {
+	color: white;
+}
+
+a {
+	margin-left: 2%;
+}
+
+audio {
+	height: 50%;
+	padding-left: 7%;
+	padding-right: 10%;
+	padding-top: 1.5%;
+}
+
+audio:focus {
+	outline: none;
+}
+
+
+
+
+
+
+@keyframes town_move {
+	100% {
+		background-position: -5000px 0;
+	}	
+} 
+
+@keyframes lulu_hop {
+	100% {
+		transform: translateY(-8px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	0% {
+		transform: translateY(-6px);
+	}
+}
+
+@keyframes greeting_move {
+	100% {
+		transform: translateX(-2500px)};
+}
+
+@keyframes heart_poo {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
