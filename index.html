@@ -7,6 +7,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
 </head>
 <body>
 
@@ -16,31 +18,85 @@
 			<h1>Doodley Emotions</h1>
 		</div>
 
-		<iframe src="./rainy_night_drive/index.html">
 
-		</iframe>
+
+
+		<div class="video_area">
+
+			<iframe id="video_player" src="">
+
+			</iframe>
+
+			<ul id="video_playlist">
+				<li class="current-video"><a href = "./rainy_night_drive/index.html">Rainy Night Drive</a></li>
+				<li><a href = "./cattle_drive/index.html">The Real Cattle Drives</a></li>
+				<li><a href = "./choco_town/index.html">Choco Town</a></li>
+			</ul>
+
+		</div>		
+
+
 
 		
+		<div class="audio_area">
 
-		<ul id="video_playlist">
-			<li class="current"><a href = "./rainy_night_drive/index.html">Rainy Night Drive</li>
-			<li><a href = "./cattle_drive/index.html">The Real Cattle Drives</li>
-			<li><a href = "./choco_town/index.html">Choco Town</li>
-		</ul>	
+			<audio id="audio_player" src="" controls loop>
+				
+			</audio>
 
-		<audio src=" " controls loop id="audioPlayer">
+			<ul id="audio_playlist">
+				<li class="current-song"><a href="rokugatsunoamaoto.mp3">Rain In June</a></li>
+				<li><a href="retroparty.mp3">Retro Party</a></li>
+				<li><a href="sanjinooyatsu.mp3">Snacky Time!</a></li>
+			</ul>	
 			
-		</audio>
-
-		<ul id="audio_playlist">
-			<li class="current"><a href="rokugatsunoamaoto.mp3">Rain In June</li>
-			<li><a href="retroparty.mp3">Retro Party</li>
-			<li><a href="sanjinooyatsu.mp3" id="st">Snacky Time!</li>
-		</ul>	
+		</div>
 
 	</div>	
+	
+	<script>
 
-	<script src="scripts.js"></script> 
+		$(document).ready(function(){
+
+  
+			play_audio();
+			function play_audio() {
+
+				var current_song = 0;
+
+				$("#audio_player")[0].src = $("#audio_playlist li a")[0];
+
+				$("#audio_playlist li a").click(function(e) {
+					e.preventDefault();
+					$("#audio_player")[0].src = this;
+					$("#audio_playlist li").removeClass("current-song");
+
+					current_song = $(this).parent().index();
+					$(this).parent().addClass("current-song");
+				});
+			}	
+
+			play_video();
+			function play_video() {
+
+				var current_video = 0;
+
+				$("#video_player")[0].src = $("video_playlist li a")[0];
+
+				$("#video_playlist li a").click(function(e) {
+					e.preventDefault();
+					$("#video_player")[0].src = this;
+					$("#video_playlist li").removeClass("current-video");
+
+					current_video = $(this).parent().index();
+					$(this).parent().addClass("current-video");
+				});
+			}
+
+		});
+
+		
+	</script>
 
 </body>
 </html>
