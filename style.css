@@ -35,6 +35,8 @@ iframe {
 	margin-left,, margin-right: 1.5rem;
 }
 
+
+
 #video_playlist {
 	position: absolute;
 	top: 20%;
@@ -50,6 +52,10 @@ li {
 	text-decoration: none;
 	color: white;
 	font-size: 1rem;
+}
+
+#video_playlist .current-video a {
+	color: yellow;
 }
 
 audio {
@@ -71,7 +77,8 @@ audio {
 	font-size: 1rem;
 }
 
-#audio_playlist .current a {
+#audio_playlist .current-song a {
 	color: yellow;
 }
+
 
