@@ -10,3 +10,26 @@ function setRandomDuration() {
 } 
 
 eyes.addEventListener("animationiteration", setRandomDuration);
+
+
+
+
+
+
+
+
+function bovine() {
+	document.getElementById("scenery1").src = "tenor.gif";
+}
+
+function follow() {
+	document.getElementById("scenery1").src = "drive_scenery.gif";
+}
+
+function follow2() {
+	document.getElementById("scenery1").src = "motorbike.gif";
+}
+
+function stars() {
+	document.getElementById("scenery1").src = "giphy2.gif";
+}

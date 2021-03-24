@@ -23,16 +23,30 @@ a {
 	position: relative;	
 }
 
-.rotating_parts {
+/*
+.scene_bee {
 	height: 2111px;
 	width: 2105px;
 	position: absolute;
-	top: -30%;
+	top: -10%;
 	left: -25%;
-	background-image: url('rotating_parts.png');
+	background-image: url('scene_bee.png');
 	z-index: 1;
 
 	animation: rotating 60s linear infinite;
+}
+*/
+
+.scenery {
+
+	position: absolute;
+	top: -20%;
+	left: 0%;
+}
+
+#scenery1 {
+	width: 200%;
+	height: 80%;
 }
 
 .static_parts {
@@ -45,6 +59,31 @@ a {
 	z-index: 2;
 }
 
+#follow {
+	position: absolute;
+	left: 2%;
+	bottom: 17%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+#follow2 {
+	position: absolute;
+	left: 2%;
+	bottom: 30%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+#stars {
+	position: absolute;
+	left: 80%;
+	bottom: 17%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+/*
 .road {
 	height: 300px;
 	width: 572px;
@@ -54,6 +93,8 @@ a {
 	overflow: hidden;
 	z-index: 0;
 }
+
+*/
 
 .blinking_eyes {
 	position: absolute;
@@ -68,8 +109,9 @@ a {
 	position: absolute;
 	top: 28%;
 	left: 65%;
-	z-index: 1;
+	z-index: 3;
 	animation: swinging 3s infinite;
+	cursor: pointer;
 }
 
 .bottom {
