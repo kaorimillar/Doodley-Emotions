@@ -12,25 +12,21 @@ a {
 	text-decoration: none;
 }
 
-
-
-.container {
+.rainyDrive_container {
 	background-color: white; ;
-	height: 480px;
+	height: 452.4px;
 	width: 800px;
 	margin: 0 auto;
 	overflow: hidden;
 	background-size: cover;
 
-	bottom: 0;
+	top: 0;
 	left: 0;
-	position: relative;
-
-	
+	position: relative;	
 }
 
 .street {
-	height: 450px;
+	height: 452.4px;
 	width: 5500px;
 	position: absolute;
 	top: 0;
@@ -43,18 +39,16 @@ a {
 }
 
 .rain {
-	width: 500px;
-	height: 480px;
+	width: 800px;
+	height: 452.4px;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	background-image: url('rain_3.png');
 	background-repeat: repeat-y;
 	z-index: 0;
 
 	animation: raining 0.5s linear infinite;
-
-
 }
 
 .inside_car {
@@ -75,47 +69,6 @@ a {
 
 	animation: blinking 1s steps(1) infinite;
 }
-
-.hana {
-	display: none;
-	position: absolute;
-	left: ;
-	bottom: 3%;
-	overflow: hidden;
-	z-index: 5;
-
-	animation: walk 0.5s infinite;
-}
-
-
-/*
-.bottom {
-	height: 55px;
-	width: 800px;
-	position: absolute;
-	bottom: 0;
-	margin: auto;
-	padding: 10px;
-	background-color: black;
-	font-family: 'Courier New';
-	z-index: 10;
-}
-
-audio {
-	float: left;
-	margin-right: 3em;
-}
-
-h4 {
-	color: white;
-}
-
-audio:focus {
-	outline: none;
-}
-
-*/
-
 
 @keyframes street_move {
 	100%{transform: translateX(-1800px)};
@@ -140,19 +93,6 @@ audio:focus {
 
 	100% {
 		opacity: 1;
-	}
-}
-
-@keyframes walk {
-
-	100% {
-		transform: translateY(-8px)
-	}
-	50% {
-		transform: translateY(2px);
-	}
-	0% {
-		transform: translateY(-6px);
 	}
 }
 
