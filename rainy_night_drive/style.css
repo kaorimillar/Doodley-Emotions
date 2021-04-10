@@ -63,9 +63,11 @@ a {
 
 .lulu_eyes_blinking {
 	position: absolute;
-	top: 51%;
-	left: 37%;
+	top: 0;
+	left: 0;
 	z-index: 3;
+	height: 100%;
+	width: 100%;
 
 	animation: blinking 1s steps(1) infinite;
 }
