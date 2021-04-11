@@ -51,23 +51,34 @@ a {
 	animation: raining 0.5s linear infinite;
 }
 
-.inside_car {
+#inside {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
+	top:  0;
+	left: 0;
 	z-index: 2;
 }
 
+
+#eyes {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
 .lulu_eyes_blinking {
+	/*
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 3;
 	height: 100%;
 	width: 100%;
+	*/
 
 	animation: blinking 1s steps(1) infinite;
 }
