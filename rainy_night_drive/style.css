@@ -1,0 +1,134 @@
+
+* {
+
+}
+
+body {
+	margin: 0;
+	padding: 0 ;
+}
+
+a {
+	text-decoration: none;
+}
+
+.rainyDrive_container {
+	background-color: white; ;
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+	overflow: hidden;
+	background-size: cover;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: relative;	
+}
+
+.street {
+	height: 100%;
+	width: 500%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('street_1.png');
+	background-repeat: repeat-x;
+	z-index: 0;
+	background-size: cover;
+
+	animation: street_move 30s linear infinite;
+
+}
+
+.street background-image {
+	position: relative;
+	height: 100%;
+	width: 500%;
+	top: 0;
+	left:0;
+}
+
+.rain {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('rain_3.png');
+	background-repeat: repeat-y;
+	z-index: 0;
+
+	animation: raining 0.5s linear infinite;
+}
+
+.rain background-image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#inside {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top:  0;
+	left: 0;
+	z-index: 2;
+}
+
+
+#eyes {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.lulu_eyes_blinking {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	height: 100%;
+	width: 100%;
+	
+
+	animation: blinking 1s steps(1) infinite;
+}
+
+@keyframes street_move {
+	100%{transform: translateX(-1800px)};
+} 
+
+@keyframes raining {
+	100%{transform: translateY(160px);}
+}
+
+@keyframes blinking {
+	0% {
+		opacity: 1;
+	}
+
+	20% {
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
